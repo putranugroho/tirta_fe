@@ -119,6 +119,14 @@ class Register extends Component {
         this.setState({ pasien: newPasien})
     }
 
+    addService = () => this.setState({redirect: true})
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to='/history' />
+        }
+    }
+
     renderService = () => {
         if (this.state.detail_service) {
             return this.state.detail_service.map(selected => {
@@ -266,6 +274,10 @@ class Register extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <button className='btn btn-primary my-3' onClick={this.setRedirect}>
+                                Kirim
+                            </button>
+                            {this.renderRedirect()}
                         </div>
                     </div>
                 </div>
