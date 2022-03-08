@@ -58,7 +58,7 @@ class Login extends Component {
                                 <button className='btn btn-primary mt-2' onClick={this.onButtonClick}>
                                     LOGIN
                                 </button>
-                                <p>Tidak memiliki akun ? <Link to='/register'>Click Disini!</Link></p>
+                                <p>Tidak memiliki akun ? <Link to='/Booking_Room'>Click Disini!</Link></p>
                             </div>
                         </div>
                     </div>

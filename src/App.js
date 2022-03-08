@@ -5,7 +5,8 @@ import { connect } from 'react-redux'
 import './App.css';
 
 import Login from './components/Login'
-import Register from './components/Register'  
+import Booking_Room from './components/Booking_Room'  
+import Home from './components/Home'
 import History from './components/History'
 import Detail_History from './components/Detail_History'
 import {keepLogin} from './action'
@@ -42,7 +43,8 @@ class App extends React.Component {
       <BrowserRouter>
           {/* <h1>Hello World!!</h1> */}
           <Route path="/login" exact component={Login}/>
-          <Route path="/" exact component={Register}/>
+          <Route path="/" exact component={Home}/>
+          <Route path="/booking" exact component={Booking_Room}/>
           <Route path="/history" exact component={History}/>
           <Route path="/detailhistory/:trans_id" exact component={Detail_History}/>
           {this.renderRedirect()}
