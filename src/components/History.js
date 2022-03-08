@@ -42,8 +42,6 @@ class History extends Component {
         };
     }
 
-    
-
     renderHistory = () => {
         return this.state.data.map(data => {
             return (
